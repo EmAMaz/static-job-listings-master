@@ -15,9 +15,9 @@ export const App = () => {
   return (
     <section className="bg-[#5da4a4]">
       <div className="bg-[url('./images/bg-header-mobile.svg')] md:bg-[url('./images/bg-header-desktop.svg')] h-38"></div>
-      <div className="bg-[#effafa] flex flex-col items-center gap-6 p-4 md:p-10 w-full">
+      <div className="bg-[#f0fafb] min-h-[calc(100vh-9.5rem)] flex flex-col items-center gap-6 p-4 md:p-10 w-full">
         <section
-          className={`flex p-4 items-center bg-white shadow-xl rounded-md w-full ${
+          className={`flex p-4 items-center bg-white shadow-xl rounded-md w-full lg:w-4xl ${
             filters.length > 0 ? "flex" : "hidden"
           }`}
         >

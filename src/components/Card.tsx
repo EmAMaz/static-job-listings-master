@@ -55,7 +55,7 @@ const Card = (props: Props) => {
               FEATURED
             </span>
           </div>
-          <span className="font-bold text-xl cursor-pointer">{props.position}</span>
+          <span className="font-bold text-xl cursor-pointer text-black">{props.position}</span>
           <div className="">
             <span className="after:content-['•'] after:mx-2 textSecondary font-medium">
               {props.postedAt}
