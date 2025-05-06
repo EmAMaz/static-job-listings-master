@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+* {
+  font-family: "League Spartan", sans-serif;
+}
+
+.textPrimary{
+    @apply text-[#5ba4a4]
+}
+.textSecondary{
+    @apply text-[#7b8e8e]
+}
+.bgPrimary{
+    @apply bg-[#5ba4a4]
+}
+.bgPrimaryLight{
+    @apply bg-[#effafa]
+}
+.bgSecondary{
+    @apply bg-[#2c3a3a]
+}
+.borderPrimary{
+    @apply border-[#5ba4a4]
+}
+.customText{
+    text-box: auto;
+    height: 19px;
+}
