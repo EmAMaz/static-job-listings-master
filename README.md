@@ -2,7 +2,7 @@
 
 This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-### [Screenshot solution](https://dancing-puppy-6d1f87.netlify.app/images/screen-web.png) 🎉🎉
+### [Screenshot solution](https://dancing-puppy-6d1f87.netlify.app/screen-web.png) 🎉🎉
 
 
 ## Overview
