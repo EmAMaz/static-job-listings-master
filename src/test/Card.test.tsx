@@ -64,7 +64,7 @@ describe("My component Card", () => {
 
   it("llamar a la función addFilter cuando se hace click en el botón 'role'", () => {
     render(
-      <CardContext.Provider value={{ addFilter: mockAddFilter }}>
+      <CardContext.Provider value={{ filters: [], addFilter: mockAddFilter}}>
         <Card {...mockProps} languages={["JavaScript", "TypeScript"]}/>
       </CardContext.Provider>
     );
