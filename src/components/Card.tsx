@@ -42,7 +42,7 @@ const Card = (props: Props) => {
               <span
                 className={
                   props.new
-                    ? "rounded-xl p-1 px-1.5 font-bold text-white bgPrimary text-sm customText"
+                    ? "badge bgPrimary"
                     : "hidden"
                 }
               >
@@ -50,7 +50,7 @@ const Card = (props: Props) => {
               </span>
             )}
             {props.featured && (
-              <span className="rounded-xl p-1 px-1.5 font-bold text-white bgSecondary text-sm customText">
+              <span className="badge bgSecondary">
                 FEATURED
               </span>
             )}

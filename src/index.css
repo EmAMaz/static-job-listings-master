@@ -22,7 +22,12 @@
 .borderPrimary{
     @apply border-[#5ba4a4]
 }
+
+.badge{
+    @apply rounded-xl px-1.5 font-bold text-white text-sm h-[18px] inline-flex
+}
 .customText{
     text-box: auto;
-    height: 19px;
+    height: 18px;
+    display: inline-flex;
 }
