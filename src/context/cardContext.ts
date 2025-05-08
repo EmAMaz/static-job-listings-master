@@ -1,5 +1,9 @@
 import { createContext } from "react";
 
-export const CardContext = createContext({
-    addFilter: () => {}
-} as any);
+type CardContextType = {
+    addFilter: (filter: string) => void;
+  };
+
+export const CardContext = createContext<CardContextType>({
+    addFilter: () => console.warn("No provider for CardContext")
+});

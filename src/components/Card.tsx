@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CardContext } from "../context/cardContext";
 
-type Props = {
+export type Props = {
   company: string;
   logo: string;
   new?: boolean;
@@ -20,8 +20,8 @@ const Card = (props: Props) => {
   const { addFilter } = useContext(CardContext);
 
   const handleFilter = (arg: string) => {
-      addFilter(arg);
-  }
+    addFilter(arg);
+  };
 
   return (
     <div
@@ -32,30 +32,32 @@ const Card = (props: Props) => {
       }`}
     >
       <div className="flex flex-col md:flex-row justify-center gap-4">
-        <div className="h-22 w-22"><img className="h-22 w-22" src={props.logo} alt={props.company} /></div>
+        <div className="h-22 w-22">
+          <img className="h-22 w-22" src={props.logo} alt={props.company} />
+        </div>
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-2">
             <span className="font-bold textPrimary">{props.company}</span>
-            <span
-              className={
-                props.new
-                  ? "rounded-xl p-1 px-1.5 font-bold text-white bgPrimary text-sm customText"
-                  : "hidden"
-              }
-            >
-              NEW!
-            </span>
-            <span
-              className={
-                props.featured
-                  ? "rounded-xl p-1 px-1.5 font-bold text-white bgSecondary text-sm customText"
-                  : "hidden"
-              }
-            >
-              FEATURED
-            </span>
+            {props.new && (
+              <span
+                className={
+                  props.new
+                    ? "rounded-xl p-1 px-1.5 font-bold text-white bgPrimary text-sm customText"
+                    : "hidden"
+                }
+              >
+                NEW!
+              </span>
+            )}
+            {props.featured && (
+              <span className="rounded-xl p-1 px-1.5 font-bold text-white bgSecondary text-sm customText">
+                FEATURED
+              </span>
+            )}
           </div>
-          <span className="font-bold text-xl cursor-pointer text-black">{props.position}</span>
+          <span className="font-bold text-xl cursor-pointer text-black">
+            {props.position}
+          </span>
           <div className="">
             <span className="after:content-['•'] after:mx-2 textSecondary font-medium">
               {props.postedAt}
@@ -69,21 +71,36 @@ const Card = (props: Props) => {
       </div>
       <div className="md:hidden h-[0.4px] w-full bg-gray-300"></div>
       <div className="flex flex-wrap md:justify-end items-center gap-3">
-        <span className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out" onClick={() => handleFilter(props.role)}>
+        <span
+          role="btn-role"
+          className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out"
+          onClick={() => handleFilter(props.role)}
+        >
           {props.role}
         </span>
-        <span className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out" onClick={() => handleFilter(props.level)}>
+        <span
+          className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out"
+          onClick={() => handleFilter(props.level)}
+        >
           {props.level}
         </span>
         {props.languages &&
           props.languages?.map((item, index) => (
-            <span key={index} className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out" onClick={() => handleFilter(item)}>
+            <span
+              key={index}
+              className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out"
+              onClick={() =>handleFilter(item)}
+            >
               {item}
             </span>
           ))}
-          {props.tools &&
+        {props.tools &&
           props.tools?.map((item, index) => (
-            <span key={index} className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out" onClick={() => handleFilter(item)}>
+            <span
+              key={index}
+              className="p-1 px-2 font-bold text-sm textPrimary bgPrimaryLight cursor-pointer hover:rotate-[-5deg] transition-all duration-300 ease-in-out"
+              onClick={() => handleFilter(item)}
+            >
               {item}
             </span>
           ))}
